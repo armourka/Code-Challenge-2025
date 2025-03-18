@@ -1,6 +1,6 @@
 For this code challenge we have provided you with a basic page that has a variety of issues. Take a moment to get a familiar with the provided code, read the mock prompt below, take a look at the mock-up, and let us know your estimated time frame for completion.
 
-Mock-up: https://www.figma.com/design/Vi4vj59IzkIAL3or6wWn6r/Code-Challenge---2025?node-id=0-1&t=5DE6A82kVuAftqlK-1
+Mock-up: https://www.figma.com/design/V4gC5GCZ4a5svD3qvdpXGo/Code-Challenge---2025-External?m=auto&t=2gCk17PYDHkTN0Db-1
 
 ------
 
