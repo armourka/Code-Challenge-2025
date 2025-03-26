@@ -3,12 +3,12 @@ document.addEventListener('DOMContentLoaded', function () {
 	const menuBtn = document.getElementById('menu-btn');
 
 	function toggleMenu() {
-		if (menu.style.display === "none") {
-			menu.style.display = "block";
-			menu.classList.add('visible')
+		if (menu.classList.contains('hidden')) {
+			menu.classList.remove('hidden');
+			menuBtn.innerHTML = '<img src="assets/xmark.svg" alt="Close Menu" class="icon" />';
 		} else {
-			menu.style.display = "none";
-			menu.classList.remove('visible');
+			menu.classList.add('hidden');
+			menuBtn.innerHTML = '<img src="assets/bars.svg" alt="Menu" class="icon" />';
 		}
 	}
 

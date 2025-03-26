@@ -21,8 +21,13 @@ header {
 	justify-content: space-between;
 	padding: 20px;
 	border-radius: 0.5em;
-	background-color: orange;
+	background-color: var(--orange-hex);
 	box-shadow: 0 0 1em 0 rgba(0, 0, 0, 0.25);
+}
+
+.hidden {
+	display: none;
+	pointer-events: none;
 }
 
 .menu-btn {
@@ -30,6 +35,8 @@ header {
 	width: 68px;
 	height: 68px;
 	border-radius: 50%;
+	background-color: var(--white-hex);
+	border: none;
 }
 
 .icon {
@@ -40,8 +47,8 @@ header {
 .navigation {
 	flex-grow: 1;
 	margin-left: auto;
-	opacity: 0;
-	pointer-events: none;
+	opacity: 1;
+	pointer-events: auto;
 	transition:
 		opacity 300ms ease,
 		transform 300ms ease;
@@ -50,28 +57,33 @@ header {
 		position: absolute;
 		top: 100%;
 		left: 0;
-		width: calc(100% - 20px);
+		width: 100%;
 		transform: translate(0, -2em);
-	}
+		transform: translate(0, 0);
 
-	&.visible {
-		opacity: 1;
-		pointer-events: auto;
-
-		@media screen and (max-width: 950px) {
-			transform: translate(0, 0);
-		}
 	}
 }
 
+.menu-link {
+	text-decoration: none;
+	color: var(--white-hex);
+	font-size: 1.5em;
+	font-weight: 700;
+}
+
 .navigation-list {
+	flex: 1;
 	display: flex;
 	gap: 1em;
 	justify-content: flex-end;
 	align-items: center;
+	padding-left: 0px;
 
 	@media screen and (max-width: 950px) {
 		flex-direction: column;
+		background-color: var(--orange-hex);
+		border-radius: 0.5em;
+		line-height: 76px;
 	}
 }
 
@@ -88,7 +100,7 @@ header {
 
 	&:hover,
 	&:focus {
-		background-color: orange;
+		background-color: var(--orange-hex);
 		color: white;
 	}
 }
@@ -143,10 +155,6 @@ img {
 
 ul {
 	list-style: none;
-}
-
-#menu {
-	padding: 10px;
 }
 
 footer {
