@@ -27,6 +27,14 @@ header {
 
 .menu-btn {
 	order: 1;
+	width: 68px;
+	height: 68px;
+	border-radius: 50%;
+}
+
+.icon {
+	width: 30px;
+	height: 34px;
 }
 
 .navigation {
@@ -67,11 +75,14 @@ header {
 	}
 }
 
-.btn {
-	display: inline-block;
+.input-round {
 	padding: 1em 1.5em;
 	border: 1px solid;
 	border-radius: 3em;
+}
+
+.btn {
+	display: inline-block;
 	color: currentcolor;
 	text-decoration: none;
 
@@ -90,9 +101,13 @@ header {
 		font-size: 1em;
 	}
 
-	& + .btn-wrapper {
+	&+.btn-wrapper {
 		margin-top: 1rem;
 	}
+}
+
+.header-wrapper {
+	text-align: center;
 }
 
 .section-title {
@@ -100,7 +115,7 @@ header {
 	font-weight: 700;
 	font-size: 3.75em;
 
-	& + .content-container {
+	&+.content-container {
 		margin-top: 1rem;
 	}
 }
@@ -110,7 +125,7 @@ header {
 	font-weight: 500;
 	font-size: 1.25em;
 
-	& + .section-title {
+	&+.section-title {
 		margin-top: 0.5rem;
 	}
 }

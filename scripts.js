@@ -5,12 +5,14 @@ document.addEventListener('DOMContentLoaded', function () {
 	function toggleMenu() {
 		if (menu.style.display === "none") {
 			menu.style.display = "block";
+			menu.classList.add('visible')
 		} else {
 			menu.style.display = "none";
+			menu.classList.remove('visible');
 		}
 	}
 
-	menu.addEventListener('click', toggleMenu);
+	menuBtn.addEventListener('click', toggleMenu);
 });
 
 document.getElementById('contact-form').addEventListener('submit', function (event) {
