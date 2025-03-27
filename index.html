@@ -16,12 +16,12 @@
 
 <body>
 	<header>
-		<a href="/" class="logo-wrapper">
+		<a href="/" class="logo-wrapper" aria-label="Home">
 			<picture>
 				<img src="assets/logo.svg" alt="A Totally Real Company" class="logo" loading="eager" />
 			</picture>
 		</a>
-		<button id="menu-btn" class="menu-btn">
+		<button id="menu-btn" class="menu-btn" aria-label="Toggle Menu">
 			<img src="assets/bars.svg" alt="Menu" class="icon" />
 		</button>
 
@@ -44,7 +44,7 @@
 						sed diam eget risus varius blandit sit amet non magna. Aenean lacinia bibendum nulla sed consectetur. Nulla
 						vitae elit libero, a pharetra augue. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</p>
 					<div class="btn-wrapper">
-						<a href="#" class="btn input-round">Example CTA</a>
+						<a href="#" class="btn round">Example CTA</a>
 					</div>
 				</div>
 
@@ -69,9 +69,11 @@
 				</div>
 
 				<form id="contact-form" class="contact-form">
-					<input type="text" id="name" class="input-round" placeholder="Name" required>
-					<input type="email" id="email" class="input-round" placeholder="Email" required>
-					<button class="btn input-round submit-btn">Submit</button>
+					<input type="text" id="name" class="input round" required>
+					<label for="name" class="input-label">Name</label>
+					<input type="email" id="email" class="input round" required>
+					<label for="email" class="input-label">Email</label>
+					<button class="btn input round submit-btn">Submit</button>
 				</form>
 			</div>
 		</section>
@@ -80,10 +82,9 @@
 	<footer class="footer">
 		<p>Copyright 2025 - DynamiX</p>
 		<button class="icon-button hidden" id="back-to-top">
-			<img src="assets/arrow-up.svg" alt="Back-to-top" class="arrow-icon" />
+			<img src="assets/arrow-up.svg" alt="Back to top" class="arrow-icon" />
 		</button>
 	</footer>
-
 
 </body>
 
