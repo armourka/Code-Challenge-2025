@@ -25,11 +25,6 @@ header {
 	box-shadow: 0 0 1em 0 rgba(0, 0, 0, 0.25);
 }
 
-.hidden {
-	display: none;
-	pointer-events: none;
-}
-
 .menu-btn {
 	order: 1;
 	width: 68px;
@@ -69,9 +64,16 @@ header {
 		top: 100%;
 		left: 0;
 		width: 100%;
-		transform: translate(0, -2em);
 		transform: translate(0, 0);
+	}
 
+	&.hidden {
+		opacity: 0;
+		pointer-events: none;
+
+		@media screen and (max-width: 950px) {
+			transform: translate(0, -2em);
+		}
 	}
 }
 
@@ -187,19 +189,29 @@ ul {
 }
 
 .icon-button {
-	position: fixed;
-	right: 75px;
-	bottom: 75px;
 	background-color: var(--orange-hex);
 	width: 50px;
 	height: 50px;
 	border-radius: 50%;
 	border: none;
 	align-content: center;
+}
 
-	@media screen and (max-width: 950px) {
+#back-to-top {
+	position: fixed;
+	right: 75px;
+	bottom: 75px;
+	opacity: 1;
+	transition:
+		opacity 1s ease;
+
+	@media screen and (max-width: 800px) {
 		right: 50%;
 		margin-right: -25px;
+	}
+
+	&.hidden {
+		opacity: 0;
 	}
 }
 
@@ -245,4 +257,12 @@ section {
 	gap: 1em;
 	max-width: 500px;
 	margin: 0 auto;
+}
+
+html {
+	scroll-behavior: smooth;
+
+	@media (prefers-reduced-motion: reduce) {
+		scroll-behavior: auto;
+	}
 }

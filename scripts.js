@@ -34,3 +34,5 @@ window.addEventListener("scroll", function () {
 		hide(document.getElementById('back-to-top'));
 	}
 }, false);
+
+document.getElementById('back-to-top').addEventListener("click", () => window.scrollTo(0, 0))
