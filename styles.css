@@ -14,6 +14,14 @@ body {
 	font-family: 'DM Sans', Arial, sans-serif;
 }
 
+footer {
+	padding: 20px;
+	border-radius: 0.5em;
+	background: var(--dark-gray-hex);
+	color: var(--white-hex);
+	text-align: center;
+}
+
 header {
 	position: relative;
 	display: flex;
@@ -41,6 +49,13 @@ ul {
 	list-style: none;
 }
 
+/* Header */
+
+.logo {
+	width: 203px;
+	height: 64px;
+}
+
 .menu-btn {
 	order: 1;
 	width: 68px;
@@ -50,20 +65,16 @@ ul {
 	border: none;
 }
 
-.logo {
-	width: 203px;
-	height: 64px;
-}
-
-.icon {
+.menu-icon {
 	width: 30px;
 	height: 34px;
 }
 
-.hero-image {
-	width: 100%;
-	height: auto;
-	border-radius: 1.5em;
+.menu-link {
+	text-decoration: none;
+	color: var(--white-hex);
+	font-size: 1.5em;
+	font-weight: 700;
 }
 
 .navigation {
@@ -93,13 +104,6 @@ ul {
 	}
 }
 
-.menu-link {
-	text-decoration: none;
-	color: var(--white-hex);
-	font-size: 1.5em;
-	font-weight: 700;
-}
-
 .navigation-list {
 	flex: 1;
 	display: flex;
@@ -116,52 +120,18 @@ ul {
 	}
 }
 
-.input-label {
-	margin-left: 2em;
-	margin-top: -3.25em;
-	transition: all 300ms ease-in-out;
-	cursor: text;
-}
+/*  Body/content */
 
-.input {
-	background-color: rgba(var(--dark-gray-rgb), .05);
+.content {
+	.width-container {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		gap: 2em 4em;
+		align-items: center;
 
-	&:focus+label,
-	&:valid+label,
-	&:user-invalid+label {
-		font-size: 11px;
-		transform: translateY(-3em)
-	}
-}
-
-.round {
-	padding: 1em 1.5em;
-	border: 1px solid;
-	border-radius: 3em;
-	font-size: 16px;
-}
-
-.btn {
-	font-size: 16px;
-	cursor: pointer;
-	display: inline-block;
-	color: currentcolor;
-	text-decoration: none;
-	background-color: var(--white-hex);
-
-	&:hover,
-	&:focus {
-		background-color: var(--orange-hex);
-		color: white;
-	}
-}
-
-.submit-btn {
-	width: fit-content;
-	justify-self: center;
-
-	@media screen and (max-width: 950px) {
-		justify-self: auto;
+		@media screen and (max-width: 950px) {
+			grid-template-columns: 1fr;
+		}
 	}
 }
 
@@ -181,6 +151,12 @@ ul {
 .header-wrapper {
 	text-align: center;
 	margin-bottom: 64px;
+}
+
+.hero-image {
+	width: 100%;
+	height: auto;
+	border-radius: 1.5em;
 }
 
 .section-title {
@@ -203,13 +179,63 @@ ul {
 	}
 }
 
-.footer {
-	padding: 20px;
-	border-radius: 0.5em;
-	background: var(--dark-gray-hex);
-	color: var(--white-hex);
-	text-align: center;
+.width-container {
+	max-width: 1400px;
+	margin: 0 auto;
+	padding-inline: 3em;
+
+	@media screen and (max-width: 1000px) {
+		padding-inline: 2em;
+	}
+
+	@media screen and (max-width: 700px) {
+		padding-inline: 1em;
+	}
 }
+
+/* Forms */
+
+.contact-form {
+	display: grid;
+	grid-template-columns: 1fr;
+	gap: 1em;
+	max-width: 500px;
+	margin: 0 auto;
+}
+
+.form-section {
+	max-width: 612px;
+	margin: auto;
+}
+
+.input-label {
+	margin-left: 2em;
+	margin-top: -3.25em;
+	transition: all 300ms ease-in-out;
+	cursor: text;
+}
+
+.input {
+	background-color: rgba(var(--dark-gray-rgb), .05);
+
+	&:focus+label,
+	&:valid+label,
+	&:user-invalid+label {
+		font-size: 11px;
+		transform: translateY(-3em)
+	}
+}
+
+.submit-btn {
+	width: fit-content;
+	justify-self: center;
+
+	@media screen and (max-width: 800px) {
+		justify-self: auto;
+	}
+}
+
+/* Footer */
 
 .arrow-icon {
 	filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(353deg) brightness(103%) contrast(101%);
@@ -244,42 +270,26 @@ ul {
 	}
 }
 
-.width-container {
-	max-width: 1400px;
-	margin: 0 auto;
-	padding-inline: 3em;
+/* Buttons, widely reusable classes */
 
-	@media screen and (max-width: 1000px) {
-		padding-inline: 2em;
-	}
-
-	@media screen and (max-width: 700px) {
-		padding-inline: 1em;
-	}
+.round {
+	padding: 1em 1.5em;
+	border: 1px solid;
+	border-radius: 3em;
+	font-size: 16px;
 }
 
-.content {
-	.width-container {
-		display: grid;
-		grid-template-columns: 1fr 1fr;
-		gap: 2em 4em;
-		align-items: center;
+.btn {
+	font-size: 16px;
+	cursor: pointer;
+	display: inline-block;
+	color: currentcolor;
+	text-decoration: none;
+	background-color: var(--white-hex);
 
-		@media screen and (max-width: 950px) {
-			grid-template-columns: 1fr;
-		}
+	&:hover,
+	&:focus {
+		background-color: var(--orange-hex);
+		color: white;
 	}
-}
-
-.form-section {
-	max-width: 612px;
-	margin: auto;
-}
-
-.contact-form {
-	display: grid;
-	grid-template-columns: 1fr;
-	gap: 1em;
-	max-width: 500px;
-	margin: 0 auto;
 }

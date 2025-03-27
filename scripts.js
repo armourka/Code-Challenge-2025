@@ -4,10 +4,10 @@ const menuBtn = document.getElementById('menu-btn');
 function toggleMenu() {
 	if (menu.classList.contains('hidden')) {
 		show(menu);
-		menuBtn.innerHTML = '<img src="assets/xmark.svg" alt="Close Menu" class="icon" />';
+		menuBtn.innerHTML = '<img src="assets/xmark.svg" alt="Close Menu" class="menu-icon" />';
 	} else {
 		hide(menu);
-		menuBtn.innerHTML = '<img src="assets/bars.svg" alt="Menu" class="icon" />';
+		menuBtn.innerHTML = '<img src="assets/bars.svg" alt="Menu" class="menu-icon" />';
 	}
 }
 
